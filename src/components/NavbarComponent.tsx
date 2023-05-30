@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink, useNavigate } from "react-router-dom";
 import ButtonComponent from "./ButtonComponent";
+import Logo from "./Logo";
+import { HiMenu } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
 const NavbarComponent = () => {
   const navigate = useNavigate();
+  const [toggle, setToggle] = useState(false);
+  console.log(toggle);
+
   return (
     <NavbarContainer>
-      <Navbar>
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/015/479/346/non_2x/modern-minimalist-flying-plane-logo-or-icon-free-vector.jpg"
-          alt=""
-          width="50px"
-          height="50px"
-          style={{ objectFit: "cover" }}
-        />
+      <Navbar toggle={toggle}>
+        <Logo color="rgb(11,151,252)" fontSize="40px" />
         <NavLink to="/">Home</NavLink>
         <NavLink to="/destination">Destination</NavLink>
         <NavLink to="/resevations">Resevations</NavLink>
@@ -21,25 +21,76 @@ const NavbarComponent = () => {
         <NavLink to="/aboutus">About us</NavLink>
         <NavLink to="/contactus">Contact us</NavLink>
       </Navbar>
-      <FormContainer>
-        <ButtonComponent text="Log in" onclick={() => navigate("/login")} />
-        <ButtonComponent text="sign up" onclick={() => navigate("/signup")} />
-      </FormContainer>
+      <ButtonContainer toggle={toggle}>
+        <ButtonComponent
+          text="Log in"
+          onclick={() => navigate("/login")}
+          icon=""
+          padding="8px 16px"
+          fontSize="13px"
+        />
+        <ButtonComponent
+          text="sign up"
+          onclick={() => navigate("/signup")}
+          icon=""
+          padding="8px 16px"
+          fontSize="13px"
+        />
+      </ButtonContainer>
+
+      {toggle ? (
+        <AiOutlineClose
+          className="close"
+          onClick={() => setToggle(!toggle)}
+          style={{
+            position: "absolute",
+            right: "20px",
+            fontSize: "35px",
+            color: "rgb(11,151,252)",
+          }}
+        />
+      ) : (
+        <HiMenu
+          className="menu"
+          onClick={() => setToggle(!toggle)}
+          style={{
+            position: "absolute",
+            right: "20px",
+            fontSize: "35px",
+            color: "rgb(11,151,252)",
+          }}
+        />
+      )}
     </NavbarContainer>
   );
 };
 
 const NavbarContainer = styled.div`
-  max-width: 1300px;
+  position: relative;
+  max-width: 1200px;
   margin: auto;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background: rgb(247, 247, 247);
+  @media (min-width: 1080px) {
+    .menu,
+    .close {
+      display: none;
+    }
+  }
+  @media (max-width: 1080px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 `;
-const Navbar = styled.nav`
+const Navbar = styled.nav<{ toggle: boolean }>`
   display: flex;
-  gap: 80px;
+  gap: 70px;
   align-items: center;
   a {
     text-decoration: none;
@@ -48,12 +99,26 @@ const Navbar = styled.nav`
     color: #000;
   }
   a.active {
-    color: rgb(27, 124, 228);
+    color: ${({ theme }) => theme.colors.heading};
+  }
+  @media (max-width: 1080px) {
+    a {
+      display: none;
+      display: ${({ toggle }) => (toggle ? "block" : "none")};
+    }
+    flex-direction: column;
+    gap: 30px;
   }
 `;
-const FormContainer = styled.div`
+const ButtonContainer = styled.div<{ toggle: boolean }>`
   display: flex;
-  gap: 50px;
+  gap: 20px;
+  @media (max-width: 1080px) {
+    display: none;
+    flex-direction: column;
+    margin: 10px 0;
+    display: ${({ toggle }) => (toggle ? "block" : "none")};
+  }
 `;
 
 export default NavbarComponent;

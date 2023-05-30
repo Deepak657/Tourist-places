@@ -11,10 +11,17 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import NavbarComponent from "./components/NavbarComponent";
 import { GlobalStyle } from "./globalstyle/GlobalStyle";
+import { ThemeProvider } from "styled-components";
 
 function App() {
+  const theme = {
+    colors: {
+      heading: "rgb(11,151,252)",
+      text: "#000",
+    },
+  };
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <NavbarComponent />
       <Routes>
@@ -27,7 +34,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
       </Routes>
-    </>
+    </ThemeProvider>
   );
 }
 

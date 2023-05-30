@@ -3,23 +3,44 @@ import styled from "styled-components";
 interface Ibutton {
   text: string;
   onclick: () => void;
+  icon: any;
+  padding: string;
+  fontSize: string;
 }
 
-const ButtonComponent = ({ text, onclick }: Ibutton) => {
-  return <Button onClick={onclick}>{text}</Button>;
+const ButtonComponent = ({
+  text,
+  onclick,
+  icon,
+  padding,
+  fontSize,
+}: Ibutton) => {
+  return (
+    <Button onClick={onclick} padding={padding} fontSize={fontSize}>
+      {icon}
+      {text}
+    </Button>
+  );
 };
 
-const Button = styled.button`
-  color: rgb(27, 124, 228);
+const Button = styled.button<{ padding: string; fontSize: string }>`
+  color: ${({ theme }) => theme.colors.heading};
   background: transparent;
-  border: 1px solid rgb(27, 124, 228);
-  padding: 8px 16px;
+  border: 2px solid ${({ theme }) => theme.colors.heading};
+  border-radius: 5px;
+  padding: ${({ padding }) => padding};
   font-family: sans-serif;
   font-weight: 700;
+  font-size: ${({ fontSize }) => fontSize};
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   :hover {
-    background: rgb(27, 124, 228);
+    background: ${({ theme }) => theme.colors.heading};
     color: #fff;
+    transition: 0.4s;
   }
 `;
 
