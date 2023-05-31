@@ -50,7 +50,7 @@ const Form = ({
       height="auto"
     >
       <LoginStyle>
-        <LoginForm style={{ padding: "25px 70px 30px 30px", flexBasis: "50%" }}>
+        <LoginForm>
           <LogoLable>
             <Logo fontSize="40px" color="rgb(11,151,252)" />
             <Lable lable="Smart Travel" fontSize="18px" display={show} />
@@ -162,13 +162,21 @@ export const BackgroundImage = styled.div<{ url: string; height: string }>`
   margin: auto;
   padding: 80px;
   height: ${({ height }) => height};
+  @media (max-width: 400px) {
+    padding: 40px;
+  }
 `;
 
 const LoginForm = styled.div`
   padding: 25px 70px 30px 30px;
   width: 50%;
   @media (max-width: 850px) {
-    width: 100%;
+    flex-basis: 100%;
+    padding: 0;
+  }
+  @media (max-width: 400px) {
+    flex-basis: 100%;
+    padding: 0;
   }
 `;
 
@@ -177,12 +185,19 @@ const LoginStyle = styled.div`
   border-radius: 10px;
   max-width: 100%;
   background: #fff;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   line-height: 2;
   justify-content: center;
   @media (max-width: 850px) {
     .image {
       width: 100%;
+    }
+  }
+  @media (max-width: 400px) {
+    line-height: 1.5;
+    .image {
+      width: 100%;
+      height: 300px;
     }
   }
 `;

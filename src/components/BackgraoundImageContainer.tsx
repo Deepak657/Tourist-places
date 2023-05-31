@@ -38,7 +38,7 @@ const BackgraoundImageContainer = ({ img, title }: Iprops) => {
         </Heading>
         <Content
           style={{
-            width: "700px",
+            maxWidth: "700px",
             textAlign: "center",
             color: "#fff",
             marginBottom: "120px",

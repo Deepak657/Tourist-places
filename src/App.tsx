@@ -25,7 +25,7 @@ function App() {
       <GlobalStyle />
       <NavbarComponent />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Tourist-places" element={<Home />} />
         <Route path="destination" element={<Destination />} />
         <Route path="resevations" element={<Resevations />} />
         <Route path="blogs" element={<Blogs />} />

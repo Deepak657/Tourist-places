@@ -13,8 +13,9 @@ const SmartTravel = ({ title, img, height, order, component }: Iprops) => {
   return (
     <SmartTravelStyle>
       <div
+        className="content"
         style={{
-          flexBasis: "39%",
+          width: "39%",
           order: order,
         }}
       >
@@ -28,6 +29,7 @@ const SmartTravel = ({ title, img, height, order, component }: Iprops) => {
         {component}
       </div>
       <img
+        className="image"
         src={img}
         alt=""
         width="50%"
@@ -45,6 +47,15 @@ const SmartTravelStyle = styled.div`
   justify-content: center;
   gap: 120px;
   align-items: center;
+  @media (max-width: 400px) {
+    .image {
+      width: 100%;
+      height: 400px;
+    }
+    .content {
+      flex-basis: 100%;
+    }
+  }
 `;
 
 export default SmartTravel;

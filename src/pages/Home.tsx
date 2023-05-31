@@ -49,6 +49,7 @@ const Home = () => {
           </ButtonContainer>
         </JourneyCardLeft>
         <img
+          className="image"
           src="https://www.pngitem.com/pimgs/m/171-1713706_transparent-girl-sitting-png-girl-with-travel-bag.png"
           alt=""
           width="50%"
@@ -157,9 +158,18 @@ const JourneyBodyContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
   }
+  @media (max-width: 400px) {
+    .image {
+      width: 100%;
+    }
+  }
 `;
+
 const JourneyCardLeft = styled.div`
   flex-basis: 50%;
+  @media (max-width: 400px) {
+    flex-basis: 100%;
+  }
 `;
 const HeadingContainer = styled.div`
   padding-right: 210px;

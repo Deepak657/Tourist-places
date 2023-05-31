@@ -44,7 +44,7 @@ const FooterContainer = ({
             text="Home"
             color={colorLink}
             fontSize={fontSizeLink}
-            onclick={() => navigate("/")}
+            onclick={() => navigate("/Tourist-places")}
           />
           <FooterLink
             text="Destination"

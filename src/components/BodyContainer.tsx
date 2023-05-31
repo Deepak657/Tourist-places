@@ -50,6 +50,9 @@ const HeadingTwo = styled.h4`
 const DestinationLeftBody = styled.div`
   flex-basis: 50%;
   padding: 20px 0;
+  @media (max-width: 400px) {
+    flex-basis: 100%;
+  }
 `;
 
 export default BodyContainer;

@@ -14,7 +14,7 @@ const NavbarComponent = () => {
     <NavbarContainer>
       <Navbar toggle={toggle}>
         <Logo color="rgb(11,151,252)" fontSize="40px" />
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/Tourist-places">Home</NavLink>
         <NavLink to="/destination">Destination</NavLink>
         <NavLink to="/resevations">Resevations</NavLink>
         <NavLink to="/blogs">Blogs</NavLink>
@@ -115,9 +115,8 @@ const ButtonContainer = styled.div<{ toggle: boolean }>`
   gap: 20px;
   @media (max-width: 1080px) {
     display: none;
-    flex-direction: column;
-    margin: 10px 0;
-    display: ${({ toggle }) => (toggle ? "block" : "none")};
+    margin: 20px 0;
+    display: ${({ toggle }) => (toggle ? "flex" : "none")};
   }
 `;
 

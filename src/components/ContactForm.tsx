@@ -14,6 +14,7 @@ const ContactForm = ({ img }: Iprops) => {
   return (
     <ContactFormStyle>
       <img
+        className="image"
         src={img}
         alt=""
         width="45%"
@@ -65,10 +66,21 @@ const ContactFormStyle = styled.div`
   display: flex;
   gap: 120px;
   flex-wrap: wrap;
+
+  @media (max-width: 400px) {
+    .image {
+      width: 100%;
+      height: 400px;
+    }
+    gap: 50px;
+  }
 `;
 const Form = styled.div`
   line-height: 5;
   width: 45%;
+  @media (max-width: 400px) {
+    flex-basis: 100%;
+  }
 `;
 
 export default ContactForm;

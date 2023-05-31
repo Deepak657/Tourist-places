@@ -18,6 +18,9 @@ const Heading = styled.h1`
   margin-bottom: 20px;
   font-weight: 700;
   line-height: 1.4;
+  @media (max-width: 400px) {
+    font-size: 22px;
+  }
 `;
 
 export default HeadingComponent;
