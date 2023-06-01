@@ -8,11 +8,15 @@ interface Iprops {
 const CradReview = ({ review }: Iprops) => {
   return (
     <Review>
-      <AiFillStar style={{ color: "rgb(253,247,16)", fontSize: "20px" }} /> (
-      {review}.0) Reviews
+      <AiFillStar2 /> ({review}.0) Reviews
     </Review>
   );
 };
+
+const AiFillStar2 = styled(AiFillStar)`
+  color: rgb(253, 247, 16);
+  font-size: 20px;
+`;
 const Review = styled.div`
   display: flex;
   gap: 4px;

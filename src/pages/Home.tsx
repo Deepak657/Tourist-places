@@ -49,12 +49,10 @@ const Home = () => {
               />
             </ButtonContainer>
           </JourneyCardLeft>
-          <img
+          <Image
             className="image"
             src="https://www.pngitem.com/pimgs/m/171-1713706_transparent-girl-sitting-png-girl-with-travel-bag.png"
             alt=""
-            width="50%"
-            style={{ objectFit: "cover" }}
           />
         </JourneyBodyContainer>
         <JourneyCardContainer>
@@ -140,15 +138,18 @@ const Home = () => {
           />
         </SeeMore>
       </Wrapper>
-      <FooterContainer
-        colorHeading="rgb(241, 241, 241)"
-        colorLink="#dedede"
-        fontSizeHeading="22px"
-        fontSizeLink="14px"
-      />
+      <FooterContainer />
     </>
   );
 };
+
+const Image = styled.img`
+  width: 50%;
+  object-fit: cover;
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+`;
 
 export const Wrapper = styled.div`
   max-width: 1200px;
@@ -162,11 +163,6 @@ const JourneyBodyContainer = styled.div`
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  @media (max-width: 400px) {
-    .image {
-      width: 100%;
-    }
   }
 `;
 

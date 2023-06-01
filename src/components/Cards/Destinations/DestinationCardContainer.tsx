@@ -28,13 +28,27 @@ const DestinationCardContainer = () => {
         />
       </DestinationCardContainerStyle>
       <DotContainer>
-        <div className="dot" style={{ background: "#e4dfdf" }}></div>
-        <div className="dot" style={{ background: "#7b7979" }}></div>
-        <div className="dot" style={{ background: "rgb(172, 212, 255)" }}></div>
+        <Dot1 />
+        <Dot2 />
+        <Dot3 />
       </DotContainer>
     </>
   );
 };
+
+const Dot1 = styled.div`
+  padding: 6px;
+  border-radius: 50%;
+  background: #e4dfdf;
+`;
+
+const Dot2 = styled(Dot1)`
+  background: #7b7979;
+`;
+const Dot3 = styled(Dot1)`
+  background: rgb(172, 212, 255);
+`;
+
 const DestinationCardContainerStyle = styled.div`
   margin: 30px 0 0;
   display: flex;

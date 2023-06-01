@@ -12,18 +12,7 @@ const ContactForm = ({ img }: Iprops) => {
   const navigate = useNavigate();
   return (
     <ContactFormStyle>
-      <img
-        className="image"
-        src={img}
-        alt=""
-        width="45%"
-        height="530px"
-        style={{
-          objectFit: "cover",
-          borderRadius: "50%",
-          border: "medium dashed rgb(11,151,252)",
-        }}
-      />
+      <Image src={img} alt="" />
       <Form>
         <InputField
           placeHolder="Input Your Name"
@@ -40,12 +29,7 @@ const ContactForm = ({ img }: Iprops) => {
           placeholder="Write a Message Here"
           lable="Message"
         />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
+        <ButtonWrapper>
           <ButtonComponent
             text="Send"
             onclick={() => navigate("")}
@@ -53,11 +37,25 @@ const ContactForm = ({ img }: Iprops) => {
             padding="10px 50px"
             fontSize="16px"
           />
-        </div>
+        </ButtonWrapper>
       </Form>
     </ContactFormStyle>
   );
 };
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Image = styled.img`
+  width: 45%;
+  height: 530px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: medium dashed rgb(11, 151, 252);
+`;
+
 const ContactFormStyle = styled.div`
   margin: 50px 0;
   align-items: center;

@@ -6,13 +6,7 @@ const GuiderCard = () => {
   return (
     <GuiderCardStyle>
       <GuiderNameImage>
-        <img
-          src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
-          alt=""
-          width="40px"
-          height="40px"
-          style={{ borderRadius: "50%", objectFit: "cover" }}
-        />
+        <Image src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="" />
         <GuiderDetails>
           <GuiderName>Sher Nadir</GuiderName>
           <GuiderDuity>Guider</GuiderDuity>
@@ -20,15 +14,29 @@ const GuiderCard = () => {
       </GuiderNameImage>
       <IconContainer>
         <Icon>
-          <BiMessageEdit style={{ color: "rgb(11,151,252)" }} />
+          <BiMessageEdit2 />
         </Icon>
         <Icon>
-          <BsTelephoneFill style={{ color: "rgb(11,151,252)" }} />
+          <BsTelephoneFill2 />
         </Icon>
       </IconContainer>
     </GuiderCardStyle>
   );
 };
+
+const BiMessageEdit2 = styled(BiMessageEdit)`
+  color: rgb(11, 151, 252);
+`;
+const BsTelephoneFill2 = styled(BsTelephoneFill)`
+  color: rgb(11, 151, 252);
+`;
+
+const Image = styled.img`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+`;
 
 const GuiderCardStyle = styled.div`
   display: flex;

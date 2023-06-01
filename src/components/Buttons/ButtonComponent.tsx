@@ -17,7 +17,7 @@ const ButtonComponent = ({
 }: Ibutton) => {
   return (
     <Button onClick={onclick} padding={padding} fontSize={fontSize}>
-      {icon}
+      {icon && icon}
       {text}
     </Button>
   );

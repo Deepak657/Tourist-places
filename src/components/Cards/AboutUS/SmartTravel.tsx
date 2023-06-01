@@ -12,33 +12,34 @@ interface Iprops {
 const SmartTravel = ({ title, img, height, order, component }: Iprops) => {
   return (
     <SmartTravelStyle>
-      <div
-        className="content"
-        style={{
-          width: "39%",
-          order: order,
-        }}
-      >
-        <Heading
-          style={{
-            fontSize: "40px",
-          }}
-        >
-          {title}
-        </Heading>
+      <Description order={order}>
+        <Title>{title}</Title>
         {component}
-      </div>
-      <img
-        className="image"
-        src={img}
-        alt=""
-        width="50%"
-        height={height}
-        style={{ objectFit: "cover", borderRadius: "10px" }}
-      />
+      </Description>
+      <Image src={img} alt="" height={height} />
     </SmartTravelStyle>
   );
 };
+
+const Image = styled.img<{ height: string }>`
+  width: 50%;
+  height: ${({ height }) => height};
+  object-fit: cover;
+  border-radius: 10px;
+  @media (max-width: 400px) {
+    width: 100%;
+    height: 400px;
+  }
+`;
+
+const Title = styled(Heading)`
+  font-size: 40px;
+`;
+
+const Description = styled.div<{ order: number }>`
+  width: 39%;
+  order: ${({ order }) => order};
+`;
 const SmartTravelStyle = styled.div`
   margin: 50px 0;
   display: flex;

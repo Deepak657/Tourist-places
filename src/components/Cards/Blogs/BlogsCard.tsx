@@ -10,43 +10,18 @@ interface Iprops {
 const BlogsCard = ({ img }: Iprops) => {
   return (
     <BlogsCardStyle>
-      <img
-        src={img}
-        alt=""
-        width="100%"
-        height="280px"
-        style={{ borderRadius: "10px", objectFit: "cover" }}
-      />
+      <Image src={img} alt="" />
       <DateAuther>
         <Date>23/4/2023</Date>
-        <Date
-          style={{
-            color: "black",
-          }}
-        >
-          Auther
-        </Date>
+        <Auther>Auther</Auther>
       </DateAuther>
-      <Heading
-        style={{
-          color: "black",
-          fontSize: "25px",
-        }}
-      >
-        Give You better health a lift in our journey.........
-      </Heading>
-      <Content
-        style={{
-          fontSize: "13px",
-          marginBottom: "0",
-        }}
-      >
+      <Title>Give You better health a lift in our journey.........</Title>
+      <Description>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint iure
         dolor doloremque officia? Eaque incidunt obcaecati mollitia architecto
         repellendus odio neque error, accusantium vitae, quae iure eligendi et
-        suscipit laudantium.....{" "}
-        <span style={{ color: "orange" }}>See More</span>
-      </Content>
+        suscipit laudantium..... <Span>See More</Span>
+      </Description>
     </BlogsCardStyle>
   );
 };
@@ -55,6 +30,25 @@ const BlogsCardStyle = styled.div`
   width: 330px;
 `;
 
+const Image = styled.img`
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+`;
+
+const Title = styled(Heading)`
+  color: #000;
+  font-size: 25px;
+`;
+
+const Span = styled.span`
+  color: orange;
+`;
+const Description = styled(Content)`
+  font-size: 13px;
+  margin-bottom: 0;
+`;
 const DateAuther = styled.div`
   margin: 18px 0;
   padding: 14px;
@@ -68,5 +62,9 @@ const Date = styled.div`
   font-weight: 700;
   font-size: 17px;
   color: ${({ theme }) => theme.colors.heading};
+`;
+
+const Auther = styled(Date)`
+  color: black;
 `;
 export default BlogsCard;

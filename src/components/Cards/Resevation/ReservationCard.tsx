@@ -18,13 +18,7 @@ const ReservationCard = ({ image, heading, location, review }: Iprops) => {
   const navigate = useNavigate();
   return (
     <ReservationCardStyle>
-      <img
-        src={image}
-        alt=""
-        width="100%"
-        height="220px"
-        style={{ borderRadius: "5px", objectFit: "cover" }}
-      />
+      <Image src={image} alt="" />
       <Genric>
         <CardHeading heading={heading} />
         <CardLocation location={location} />
@@ -43,6 +37,13 @@ const ReservationCard = ({ image, heading, location, review }: Iprops) => {
     </ReservationCardStyle>
   );
 };
+
+const Image = styled.img`
+  width: 100%;
+  height: 220px;
+  border-radius: 5px;
+  object-fit: cover;
+`;
 
 const ReservationCardStyle = styled.div`
   width: 370px;

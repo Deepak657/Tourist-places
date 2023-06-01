@@ -1,5 +1,4 @@
 import React from "react";
-// import { BackgroundImage } from "../Forms/Form";
 import { BackgroundImage } from "../../pages/Blogs";
 import ButtonComponent from "../Buttons/ButtonComponent";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +12,7 @@ const BackgraoundImageContainer = ({ img, title }: Iprops) => {
   const navigate = useNavigate();
 
   return (
-    <BackgroundImage url={img} height="600px">
+    <BackgroundImage2 url={img} height="600px">
       <Title>{title}</Title>
       <Description>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
@@ -28,9 +27,13 @@ const BackgraoundImageContainer = ({ img, title }: Iprops) => {
         padding="12px 100px"
         fontSize="18px"
       />
-    </BackgroundImage>
+    </BackgroundImage2>
   );
 };
+
+const BackgroundImage2 = styled(BackgroundImage)`
+  justify-content: flex-end;
+`;
 
 export const Title = styled.h4`
   font-family: sans-serif;

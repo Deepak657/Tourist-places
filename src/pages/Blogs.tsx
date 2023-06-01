@@ -16,17 +16,8 @@ const Blogs = () => {
         <BackgroundImage
           url="https://images.pexels.com/photos/4109548/pexels-photo-4109548.jpeg"
           height="500px"
-          style={{
-            justifyContent: "space-between",
-          }}
         >
-          <Title
-            style={{
-              alignSelf: "flex-end",
-            }}
-          >
-            20 Most Beautiful Travel Blogs In 2023
-          </Title>
+          <Title2>20 Most Beautiful Travel Blogs In 2023</Title2>
           <ButtonComponent
             text="See More"
             onclick={() => navigate("")}
@@ -35,25 +26,12 @@ const Blogs = () => {
             fontSize="18px"
           />
         </BackgroundImage>
-        <Heading
-          style={{
-            fontSize: "40px",
-            textAlign: "center",
-            margin: "50px 0 0",
-          }}
-        >
-          Our Latest Blogs Posts
-        </Heading>
+        <Heading2>Our Latest Blogs Posts</Heading2>
         <ContentWrapper>
-          <Content
-            style={{
-              width: "400px",
-              textAlign: "center",
-            }}
-          >
+          <Content2>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
             consectetur ducimus doloribus alias remgtheryh temporibus sed.
-          </Content>
+          </Content2>
         </ContentWrapper>
         <BlogsCardContaner />
         <SeeMore>
@@ -66,24 +44,31 @@ const Blogs = () => {
           />
         </SeeMore>
       </Wrapper>
-      <FooterContainer
-        colorHeading="rgb(241, 241, 241)"
-        colorLink="#dedede"
-        fontSizeHeading="22px"
-        fontSizeLink="14px"
-      />
+      <FooterContainer />
     </>
   );
 };
 
+const Heading2 = styled(Heading)`
+  font-size: 40px;
+  text-align: center;
+  margin: 50px 0 0;
+`;
+const Title2 = styled(Title)`
+  align-self: flex-end;
+`;
+const Content2 = styled(Content)`
+  width: 400px;
+  text-align: center;
+`;
 export const BackgroundImage = styled.div<{ url: string; height: string }>`
-  background: url(${({ url }) => url}) center;
+  background: url(${({ url }) => url});
   background-size: cover;
   padding: 80px;
   height: ${({ height }) => height};
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   border-radius: 10px;
   @media (max-width: 400px) {

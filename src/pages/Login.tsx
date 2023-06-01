@@ -66,19 +66,16 @@ const Login = () => {
         </P>
         <P color="#000">
           Don't have a account?{" "}
-          <span
-            style={{
-              color: "rgb(11,151,252)",
-            }}
-            onClick={() => navigate("/signup")}
-          >
-            sign Up here
-          </span>{" "}
+          <Span onClick={() => navigate("/signup")}>sign Up here</Span>{" "}
         </P>
       </Form>
     </Wrapper>
   );
 };
+
+const Span = styled.span`
+  color: rgb(11, 151, 252);
+`;
 
 export const ButtonWrapper = styled.div`
   display: flex;

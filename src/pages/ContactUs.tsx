@@ -15,12 +15,7 @@ const ContactUs = () => {
 
         <ContactForm img="https://img.freepik.com/free-photo/surprised-excited-businesswoman-holding-laptop-reacting-amazed-smth-awesome-standing-suit-white-background_1258-85609.jpg" />
       </Wrapper>
-      <FooterContainer
-        colorHeading="rgb(241, 241, 241)"
-        colorLink="#dedede"
-        fontSizeHeading="22px"
-        fontSizeLink="14px"
-      />
+      <FooterContainer />
     </>
   );
 };

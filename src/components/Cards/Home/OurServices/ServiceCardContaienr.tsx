@@ -10,22 +10,22 @@ const ServiceCardContaienr = () => {
       <ServiceHeading>Our Services</ServiceHeading>
       <ServiceContainer>
         <ServiceCard
-          icon={<RiBuilding4Line style={{ color: "#fff", fontSize: "60px" }} />}
+          icon={<RiBuilding4Line2 />}
           heading="Hotel"
           offer="Get Awesome Discount up to 25% just for you, our beloved customer"
         />
         <ServiceCard
-          icon={<TbCar style={{ color: "#fff", fontSize: "60px" }} />}
+          icon={<TbCar2 />}
           heading="Cars"
           offer="Get Awesome Discount up to 25% just for you, our beloved customer"
         />
         <ServiceCard
-          icon={<RiVisaFill style={{ color: "#fff", fontSize: "60px" }} />}
+          icon={<RiVisaFill2 />}
           heading="VISA"
           offer="Get Awesome Discount up to 25% just for you, our beloved customer"
         />
         <ServiceCard
-          icon={<CiUser style={{ color: "#fff", fontSize: "60px" }} />}
+          icon={<CiUser2 />}
           heading="Guider"
           offer="Get Awesome Discount up to 25% just for you, our beloved customer"
         />
@@ -33,6 +33,26 @@ const ServiceCardContaienr = () => {
     </>
   );
 };
+
+const RiBuilding4Line2 = styled(RiBuilding4Line)`
+  color: #fff;
+  font-size: 60px;
+`;
+const TbCar2 = styled(TbCar)`
+  color: #fff;
+  font-size: 60px;
+`;
+
+const RiVisaFill2 = styled(RiVisaFill)`
+  color: #fff;
+  font-size: 60px;
+`;
+
+const CiUser2 = styled(CiUser)`
+  color: #fff;
+  font-size: 60px;
+`;
+
 const ServiceHeading = styled.div`
   max-width: 1200px;
   margin: 50px auto;

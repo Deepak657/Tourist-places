@@ -7,20 +7,11 @@ import InputField from "../Forms/InputField";
 import { CiFacebook } from "react-icons/ci";
 import { BsInstagram, BsPlayBtn } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
-interface Iprops {
-  colorHeading: string;
-  colorLink: string;
-  fontSizeHeading: string;
-  fontSizeLink: string;
-}
+import FooterTitle from "./FooterTitle";
 
-const FooterContainer = ({
-  colorHeading,
-  colorLink,
-  fontSizeHeading,
-  fontSizeLink,
-}: Iprops) => {
+const FooterContainer = () => {
   const navigate = useNavigate();
+
   return (
     <FooterBody>
       <FooterContaienrStyle>
@@ -28,128 +19,56 @@ const FooterContainer = ({
           <Logo color="#fff" fontSize="80px" />
           <FooterLink
             text="Copyright @ Love To Fly 2023 All Right Reserved"
-            color={colorLink}
-            fontSize={fontSizeLink}
             onclick={() => navigate("")}
           />
         </FooterLinkStyle>
         <FooterLinkStyle gap="15px" marginTop="">
-          <FooterLink
-            text="Menu"
-            color={colorHeading}
-            fontSize={fontSizeHeading}
-            onclick={() => navigate("")}
-          />
-          <FooterLink
-            text="Home"
-            color={colorLink}
-            fontSize={fontSizeLink}
-            onclick={() => navigate("/Tourist-places")}
-          />
+          <FooterTitle text="Menu" onclick={() => navigate("")} />
+          <FooterLink text="Home" onclick={() => navigate("/Tourist-places")} />
           <FooterLink
             text="Destination"
-            color={colorLink}
-            fontSize={fontSizeLink}
             onclick={() => navigate("/destination")}
           />
           <FooterLink
             text="Resevations"
-            color={colorLink}
-            fontSize={fontSizeLink}
             onclick={() => navigate("/resevations")}
           />
-          <FooterLink
-            text="Blogs"
-            color={colorLink}
-            fontSize={fontSizeLink}
-            onclick={() => navigate("/blogs")}
-          />
-          <FooterLink
-            text="About Us"
-            color={colorLink}
-            fontSize={fontSizeLink}
-            onclick={() => navigate("/aboutus")}
-          />
+          <FooterLink text="Blogs" onclick={() => navigate("/blogs")} />
+          <FooterLink text="About Us" onclick={() => navigate("/aboutus")} />
           <FooterLink
             text="Contact Us"
-            color={colorLink}
-            fontSize={fontSizeLink}
             onclick={() => navigate("/contactus")}
           />
         </FooterLinkStyle>
         <FooterLinkStyle gap="15px" marginTop="">
-          <FooterLink
-            text="Information"
-            color={colorHeading}
-            fontSize={fontSizeHeading}
-            onclick={() => navigate("")}
-          />
-          <FooterLink
-            text="Home"
-            color={colorLink}
-            fontSize={fontSizeLink}
-            onclick={() => navigate("/")}
-          />
+          <FooterTitle text="Information" onclick={() => navigate("")} />
+
+          <FooterLink text="Home" onclick={() => navigate("/")} />
           <FooterLink
             text="Destination"
-            color={colorLink}
-            fontSize={fontSizeLink}
             onclick={() => navigate("/destination")}
           />
           <FooterLink
             text="Resevations"
-            color={colorLink}
-            fontSize={fontSizeLink}
             onclick={() => navigate("/resevations")}
           />
-          <FooterLink
-            text="Blogs"
-            color={colorLink}
-            fontSize={fontSizeLink}
-            onclick={() => navigate("/blogs")}
-          />
+          <FooterLink text="Blogs" onclick={() => navigate("/blogs")} />
         </FooterLinkStyle>
         <FooterLinkStyle gap="15px" marginTop="">
-          <FooterLink
-            text="Contact info"
-            color={colorHeading}
-            fontSize={fontSizeHeading}
-            onclick={() => navigate("")}
-          />
-          <FooterLink
-            text="+12345612245424"
-            color={colorLink}
-            fontSize={fontSizeLink}
-            onclick={() => navigate("")}
-          />
-          <FooterLink
-            text="dk6570049@gmail.com"
-            color={colorLink}
-            fontSize={fontSizeLink}
-            onclick={() => navigate("")}
-          />
+          <FooterTitle text="Contact info" onclick={() => navigate("")} />
+
+          <FooterLink text="+12345612245424" onclick={() => navigate("")} />
+          <FooterLink text="dk6570049@gmail.com" onclick={() => navigate("")} />
           <FooterLink
             text="123,jalandhar,punjab"
-            color={colorLink}
-            fontSize={fontSizeLink}
             onclick={() => navigate("")}
           />
         </FooterLinkStyle>
         <FooterLinkStyle gap="15px" marginTop="">
-          <FooterLink
-            text="Search"
-            color={colorHeading}
-            fontSize={fontSizeHeading}
-            onclick={() => navigate("")}
-          />
+          <FooterTitle text="Search" onclick={() => navigate("")} />
           <InputField placeHolder="Search" background="#fff" lable="" />
           <FooterLinkStyle gap="15px" marginTop="30px">
-            <FooterLink
-              text="Follow us on"
-              color={colorHeading}
-              fontSize={fontSizeLink}
-              onclick={() => navigate("")}
-            />
+            <FooterLink text="Follow us on" onclick={() => navigate("")} />
             <Icon>
               <BsPlayBtn style={{ fontSize: "22px" }} />
               <BsInstagram />

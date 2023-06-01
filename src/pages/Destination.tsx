@@ -20,12 +20,7 @@ const Destination = () => {
         <DestinationCardContainer />
         <DestinationCardContainer />
       </Wrapper>
-      <FooterContainer
-        colorHeading="rgb(241, 241, 241)"
-        colorLink="#dedede"
-        fontSizeHeading="22px"
-        fontSizeLink="14px"
-      />
+      <FooterContainer />
     </>
   );
 };
