@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading } from "./CardHeading";
+import { Heading } from "../../GlobalComponent/CardHeading";
 import styled from "styled-components";
 
 interface Iprops {
@@ -40,8 +40,7 @@ const SmartTravel = ({ title, img, height, order, component }: Iprops) => {
   );
 };
 const SmartTravelStyle = styled.div`
-  max-width: 1200px;
-  margin: 50px auto;
+  margin: 50px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -36,16 +36,14 @@ const DestinationCardContainer = () => {
   );
 };
 const DestinationCardContainerStyle = styled.div`
-  max-width: 1200px;
-  margin: 30px auto 0;
+  margin: 30px 0 0;
   display: flex;
   gap: 45px;
   justify-content: center;
   flex-wrap: wrap;
 `;
 const DotContainer = styled.div`
-  max-width: 1200px;
-  margin: 10px auto;
+  margin: 10px 0;
   display: flex;
   align-items: center;
   justify-content: center;

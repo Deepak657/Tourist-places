@@ -9,17 +9,12 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import NavbarComponent from "./components/NavbarComponent";
+import NavbarComponent from "./components/Navbar/NavbarComponent";
 import { GlobalStyle } from "./globalstyle/GlobalStyle";
 import { ThemeProvider } from "styled-components";
+import { theme } from "./Theme";
 
 function App() {
-  const theme = {
-    colors: {
-      heading: "rgb(11,151,252)",
-      text: "#000",
-    },
-  };
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />

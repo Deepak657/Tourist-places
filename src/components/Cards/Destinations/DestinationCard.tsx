@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import CardHeading from "./CardHeading";
-import CradReview from "./CradReview";
-import CardLocation from "./CardLocation";
-import ButtonComponent from "./ButtonComponent";
+import CardHeading from "../../GlobalComponent/CardHeading";
+import CradReview from "../Review/CradReview";
+import CardLocation from "../../GlobalComponent/CardLocation";
+import ButtonComponent from "../../Buttons/ButtonComponent";
 import { useNavigate } from "react-router-dom";
 import { IoAirplaneSharp } from "react-icons/io5";
 

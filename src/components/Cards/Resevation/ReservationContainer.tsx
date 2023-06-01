@@ -27,8 +27,7 @@ const ReservationContainer = () => {
   );
 };
 const ReservationCardContainerStyle = styled.div`
-  max-width: 1200px;
-  margin: 30px auto 0;
+  margin: 30px 0 0;
   display: flex;
   gap: 45px;
   justify-content: center;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CardHeading from "./CardHeading";
+import CardHeading from "../../../GlobalComponent/CardHeading";
 
 interface Iprops {
   icon: any;

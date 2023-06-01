@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import ParagraphComponent from "../components/ParagraphComponent";
-import HeadingComponent from "../components/HeadingComponent";
+import ParagraphComponent from "./ParagraphComponent";
+import HeadingComponent from "./HeadingComponent";
 
 interface Iprops {
   heading: string;
@@ -18,19 +18,20 @@ const BodyContainer = ({ heading, headingTwo, paragraph, image }: Iprops) => {
         <HeadingTwo>{headingTwo}</HeadingTwo>
         <ParagraphComponent paragraph={paragraph} />
       </DestinationLeftBody>
-      <img
-        src={image}
-        alt=""
-        width="100%"
-        height="280px"
-        style={{ objectFit: "cover", flexBasis: "50%", borderRadius: "10px" }}
-      />
+      <Image src={image} alt="" style={{}} />
     </DestinationBodyContainer>
   );
 };
+
+const Image = styled.img`
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  flex-basis: 50%;
+  border-radius: 10px;
+`;
 const DestinationBodyContainer = styled.div`
-  max-width: 1200px;
-  margin: 50px auto 0;
+  margin: 50px 0 0;
   display: flex;
   gap: 30px;
   align-items: center;

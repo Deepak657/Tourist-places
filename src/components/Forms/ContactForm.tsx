@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Lable from "./Lable";
 import InputField from "./InputField";
 import TextArea from "./TextArea";
-import ButtonComponent from "./ButtonComponent";
+import ButtonComponent from "../Buttons/ButtonComponent";
 import { useNavigate } from "react-router-dom";
 
 interface Iprops {
@@ -26,20 +25,21 @@ const ContactForm = ({ img }: Iprops) => {
         }}
       />
       <Form>
-        <Lable lable="Full Name" fontSize="18px" display="block" />
         <InputField
           placeHolder="Input Your Name"
           background="#ebebeb"
-          display="block"
+          lable="Full Name"
         />
-        <Lable lable="Email" fontSize="18px" display="block" />
         <InputField
           placeHolder="Input Email Here"
           background="#ebebeb"
-          display="block"
+          lable="Email"
         />
-        <Lable lable="Message" fontSize="18px" display="block" />
-        <TextArea background="#ebebeb" placeholder="Write a Message Here" />
+        <TextArea
+          background="#ebebeb"
+          placeholder="Write a Message Here"
+          lable="Message"
+        />
         <div
           style={{
             display: "flex",
@@ -59,8 +59,7 @@ const ContactForm = ({ img }: Iprops) => {
   );
 };
 const ContactFormStyle = styled.div`
-  max-width: 1200px;
-  margin: 50px auto;
+  margin: 50px 0;
   align-items: center;
   justify-content: center;
   display: flex;

@@ -15,8 +15,6 @@ const BlogsCardContaner = () => {
   );
 };
 const BlogsCardContanerStyle = styled.div`
-  max-width: 1200px;
-  margin: auto;
   display: flex;
   justify-content: center;
   gap: 105px;

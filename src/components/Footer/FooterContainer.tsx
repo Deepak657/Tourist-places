@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "./Logo";
+import Logo from "../GlobalComponent/Logo";
 import FooterLink from "./FooterLink";
-import InputField from "./InputField";
+import InputField from "../Forms/InputField";
 
 import { CiFacebook } from "react-icons/ci";
 import { BsInstagram, BsPlayBtn } from "react-icons/bs";
@@ -142,7 +142,7 @@ const FooterContainer = ({
             fontSize={fontSizeHeading}
             onclick={() => navigate("")}
           />
-          <InputField placeHolder="Search" background="#fff" display="block" />
+          <InputField placeHolder="Search" background="#fff" lable="" />
           <FooterLinkStyle gap="15px" marginTop="30px">
             <FooterLink
               text="Follow us on"

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Content } from "./ParagraphComponent";
+import { Content } from "../../GlobalComponent/ParagraphComponent";
 interface Iprops {
   content: string;
 }

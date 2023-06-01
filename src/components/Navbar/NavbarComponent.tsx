@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink, useNavigate } from "react-router-dom";
-import ButtonComponent from "./ButtonComponent";
-import Logo from "./Logo";
+import ButtonComponent from "../Buttons/ButtonComponent";
+import Logo from "../GlobalComponent/Logo";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 const NavbarComponent = () => {

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import CardHeading from "./CardHeading";
-import CardLocation from "./CardLocation";
-import CradReview from "./CradReview";
-import ButtonComponent from "./ButtonComponent";
+import CardHeading from "../../GlobalComponent/CardHeading";
+import CardLocation from "../../GlobalComponent/CardLocation";
+import CradReview from "../Review/CradReview";
+import ButtonComponent from "../../Buttons/ButtonComponent";
 import { useNavigate } from "react-router-dom";
-import GuiderCard from "./GuiderCard";
+import GuiderCard from "../Guider/GuiderCard";
 
 interface Iprops {
   image: string;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Content } from "./ParagraphComponent";
+import { Content } from "../../GlobalComponent/ParagraphComponent";
 const AboutContent = () => {
   return (
     <Content

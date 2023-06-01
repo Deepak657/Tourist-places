@@ -1,21 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import Lable from "./Lable";
 
 interface Iprops {
   background: string;
   placeholder: string;
+  lable: string;
 }
 
-const TextArea = ({ background, placeholder }: Iprops) => {
+const TextArea = ({ background, placeholder, lable }: Iprops) => {
   return (
-    <div>
+    <>
+      {lable && <Lable lable={lable} />}
       <TextAreaStyle
         background={background}
         cols={30}
         rows={10}
         placeholder={placeholder}
       ></TextAreaStyle>
-    </div>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading } from "../components/CardHeading";
-import { Content } from "../components/ParagraphComponent";
+import { Heading } from "../../GlobalComponent/CardHeading";
+import { Content } from "../../GlobalComponent/ParagraphComponent";
 
 interface Iprops {
   img: string;
