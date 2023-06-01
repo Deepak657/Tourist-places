@@ -26,13 +26,17 @@ const ReservationCard = ({ image, heading, location, review }: Iprops) => {
           <CradReview review={review} />
           <ButtonComponent
             text="Details"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon=""
             padding="8px 16px"
             fontSize="13px"
           />
         </ReviewButtonContainer>
-        <GuiderCard />
+        <GuiderCard
+          img="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
+          name="Sher Nadir"
+          title="Guider"
+        />
       </Genric>
     </ReservationCardStyle>
   );

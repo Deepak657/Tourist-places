@@ -1,18 +1,17 @@
-import React from "react";
+import React, { InputHTMLAttributes } from "react";
 import styled from "styled-components";
 import Lable from "./Lable";
 
-interface Iprops {
-  placeHolder: string;
+interface Iprops extends InputHTMLAttributes<HTMLInputElement> {
   background: string;
   lable: string;
 }
 
-const InputField = ({ placeHolder, background, lable }: Iprops) => {
+const InputField = ({ background, lable, ...restProps }: Iprops) => {
   return (
     <>
       {lable && <Lable lable={lable} />}
-      <Input type="text" placeholder={placeHolder} background={background} />
+      <Input type="text" background={background} {...restProps} />
     </>
   );
 };

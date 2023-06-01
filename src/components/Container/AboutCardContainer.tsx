@@ -1,5 +1,5 @@
 import React from "react";
-import AboutUsCard from "./AboutUsCard";
+import AboutUsCard from "../Cards/AboutUS/AboutUsCard";
 import styled from "styled-components";
 
 const AboutCardContainer = () => {

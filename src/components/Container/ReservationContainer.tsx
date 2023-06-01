@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ReservationCard from "./ReservationCard";
+import ReservationCard from "../Cards/Resevation/ReservationCard";
 
 const ReservationContainer = () => {
   return (

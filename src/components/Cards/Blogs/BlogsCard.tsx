@@ -5,11 +5,12 @@ import { Content } from "../../GlobalComponent/ParagraphComponent";
 
 interface Iprops {
   img: string;
+  id: number;
 }
 
-const BlogsCard = ({ img }: Iprops) => {
+const BlogsCard = ({ img, id }: Iprops) => {
   return (
-    <BlogsCardStyle>
+    <BlogsCardStyle key={id}>
       <Image src={img} alt="" />
       <DateAuther>
         <Date>23/4/2023</Date>

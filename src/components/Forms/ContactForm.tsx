@@ -15,12 +15,12 @@ const ContactForm = ({ img }: Iprops) => {
       <Image src={img} alt="" />
       <Form>
         <InputField
-          placeHolder="Input Your Name"
+          placeholder="Input Your Name"
           background="#ebebeb"
           lable="Full Name"
         />
         <InputField
-          placeHolder="Input Email Here"
+          placeholder="Input Email Here"
           background="#ebebeb"
           lable="Email"
         />
@@ -32,7 +32,7 @@ const ContactForm = ({ img }: Iprops) => {
         <ButtonWrapper>
           <ButtonComponent
             text="Send"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon=""
             padding="10px 50px"
             fontSize="16px"

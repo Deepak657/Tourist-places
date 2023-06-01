@@ -1,13 +1,14 @@
 import React from "react";
 import ButtonComponent from "../components/Buttons/ButtonComponent";
 import { useNavigate } from "react-router-dom";
-import { Heading } from "../components/GlobalComponent/CardHeading";
-import { Content } from "../components/GlobalComponent/ParagraphComponent";
-import BlogsCardContaner from "../components/Cards/Blogs/BlogsCardContaner";
 import { SeeMore, Wrapper } from "./Home";
-import FooterContainer from "../components/Footer/FooterContainer";
+import FooterContainer from "../components/Container/FooterContainer";
 import styled from "styled-components";
-import { Title } from "../components/GlobalComponent/BackgraoundImageContainer";
+import { ModifiedTitleBlog } from "../components/Container/BackgraoundImageContainer";
+import { ModifiedHeadingBlog } from "../components/GlobalComponent/CardHeading";
+import { ModifiedContentBlog } from "../components/GlobalComponent/ParagraphComponent";
+import { BlogsImageUrl } from "../BlogsImage/BlogsImage";
+import BlogsCard from "../components/Cards/Blogs/BlogsCard";
 const Blogs = () => {
   const navigate = useNavigate();
   return (
@@ -17,27 +18,33 @@ const Blogs = () => {
           url="https://images.pexels.com/photos/4109548/pexels-photo-4109548.jpeg"
           height="500px"
         >
-          <Title2>20 Most Beautiful Travel Blogs In 2023</Title2>
+          <ModifiedTitleBlog>
+            20 Most Beautiful Travel Blogs In 2023
+          </ModifiedTitleBlog>
           <ButtonComponent
             text="See More"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon=""
             padding="12px 100px"
             fontSize="18px"
           />
         </BackgroundImage>
-        <Heading2>Our Latest Blogs Posts</Heading2>
+        <ModifiedHeadingBlog>Our Latest Blogs Posts</ModifiedHeadingBlog>
         <ContentWrapper>
-          <Content2>
+          <ModifiedContentBlog>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
             consectetur ducimus doloribus alias remgtheryh temporibus sed.
-          </Content2>
+          </ModifiedContentBlog>
         </ContentWrapper>
-        <BlogsCardContaner />
+        <BlogsCardContanerStyle>
+          {BlogsImageUrl.map((url) => {
+            return <BlogsCard img={url.url} id={url.id} />;
+          })}
+        </BlogsCardContanerStyle>
         <SeeMore>
           <ButtonComponent
             text="See More"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon=""
             padding="10px 80px"
             fontSize="18px"
@@ -49,19 +56,14 @@ const Blogs = () => {
   );
 };
 
-const Heading2 = styled(Heading)`
-  font-size: 40px;
-  text-align: center;
-  margin: 50px 0 0;
+const BlogsCardContanerStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 105px;
+  flex-wrap: wrap;
 `;
-const Title2 = styled(Title)`
-  align-self: flex-end;
-`;
-const Content2 = styled(Content)`
-  width: 400px;
-  text-align: center;
-`;
-export const BackgroundImage = styled.div<{ url: string; height: string }>`
+
+const BackgroundImage = styled.div<{ url: string; height: string }>`
   background: url(${({ url }) => url});
   background-size: cover;
   padding: 80px;
@@ -74,6 +76,9 @@ export const BackgroundImage = styled.div<{ url: string; height: string }>`
   @media (max-width: 400px) {
     padding: 40px;
   }
+`;
+export const ModifiedBackgroundImage = styled(BackgroundImage)`
+  justify-content: flex-end;
 `;
 
 const ContentWrapper = styled.div`

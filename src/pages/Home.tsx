@@ -9,12 +9,12 @@ import { IoLocationOutline } from "react-icons/io5";
 import { IoAirplaneSharp } from "react-icons/io5";
 import { HiSearch } from "react-icons/hi";
 import { MdMonetizationOn } from "react-icons/md";
-import BodyContainer from "../components/GlobalComponent/BodyContainer";
-import DestinationCardContainer from "../components/Cards/Destinations/DestinationCardContainer";
-import ServiceCardContaienr from "../components/Cards/Home/OurServices/ServiceCardContaienr";
-import ReservationContainer from "../components/Cards/Resevation/ReservationContainer";
-import AboutCardContainer from "../components/Cards/AboutUS/AboutCardContainer";
-import FooterContainer from "../components/Footer/FooterContainer";
+import BodyContainer from "../components/Container/BodyContainer";
+import DestinationCardContainer from "../components/Container/DestinationCardContainer";
+import ServiceCardContaienr from "../components/Container/ServiceCardContaienr";
+import ReservationContainer from "../components/Container/ReservationContainer";
+import AboutCardContainer from "../components/Container/AboutCardContainer";
+import FooterContainer from "../components/Container/FooterContainer";
 
 const Home = () => {
   const naviagte = useNavigate();
@@ -35,14 +35,14 @@ const Home = () => {
             <ButtonContainer>
               <ButtonComponent
                 text="Plane a Trip"
-                onclick={() => naviagte("")}
+                onClick={() => naviagte("")}
                 icon={<IoAirplaneSharp style={{ fontSize: "18px" }} />}
                 padding="8px 16px"
                 fontSize="13px"
               />
               <ButtonComponent
                 text="Plane a Trip"
-                onclick={() => naviagte("")}
+                onClick={() => naviagte("")}
                 icon={<HiSearch style={{ fontSize: "18px" }} />}
                 padding="8px 16px"
                 fontSize="13px"
@@ -50,7 +50,6 @@ const Home = () => {
             </ButtonContainer>
           </JourneyCardLeft>
           <Image
-            className="image"
             src="https://www.pngitem.com/pimgs/m/171-1713706_transparent-girl-sitting-png-girl-with-travel-bag.png"
             alt=""
           />
@@ -112,7 +111,7 @@ const Home = () => {
         <SeeMore>
           <ButtonComponent
             text="See More"
-            onclick={() => naviagte("")}
+            onClick={() => naviagte("")}
             icon=""
             padding="10px 80px"
             fontSize="18px"
@@ -131,7 +130,7 @@ const Home = () => {
         <SeeMore>
           <ButtonComponent
             text="See More"
-            onclick={() => naviagte("")}
+            onClick={() => naviagte("")}
             icon=""
             padding="10px 80px"
             fontSize="18px"

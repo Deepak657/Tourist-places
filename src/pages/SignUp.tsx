@@ -20,12 +20,12 @@ const SignUp = () => {
         img="https://images.unsplash.com/photo-1622900658258-56508b418f14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8&w=1000&q=80"
       >
         <InputFieldWrapper>
-          <InputField placeHolder="Full Name" background="#e4e4e4" lable="" />
-          <InputField placeHolder="Email" background="#e4e4e4" lable="" />
-          <InputField placeHolder="Password" background="#e4e4e4" lable="" />
+          <InputField placeholder="Full Name" background="#e4e4e4" lable="" />
+          <InputField placeholder="Email" background="#e4e4e4" lable="" />
+          <InputField placeholder="Password" background="#e4e4e4" lable="" />
           <ButtonComponent
             text="Sign up"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon=""
             padding="12px 20px"
             fontSize="20px"
@@ -36,21 +36,21 @@ const SignUp = () => {
         <ButtonWrapper>
           <ButtonComponent
             text="Facebook"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon={<BsFacebook />}
             padding="12px 10px"
             fontSize="20px"
           />
           <ButtonComponent
             text="Google"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon={<FcGoogle />}
             padding="12px 10px"
             fontSize="20px"
           />
           <ButtonComponent
             text="Twitter"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon={<FaTwitterSquare />}
             padding="12px 10px"
             fontSize="20px"

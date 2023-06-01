@@ -1,14 +1,8 @@
 import React from "react";
-import { Content } from "../../GlobalComponent/ParagraphComponent";
+import { ModifiedAboutContent } from "../GlobalComponent/ParagraphComponent";
 const AboutContent = () => {
   return (
-    <Content
-      style={{
-        lineHeight: "1.6",
-        marginTop: "20px",
-        marginBottom: "0",
-      }}
-    >
+    <ModifiedAboutContent>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dolor
       quas, laboriosam delectus veritatis totam molestiae aspernatur iure esse,
       debitis nihil adipisci at qui placeat fugiat sequi accusantium natus sint
@@ -22,7 +16,7 @@ const AboutContent = () => {
       laboriosam delectus veritatis totam molestiae aspernatur iure esse,
       debitis nihil adipisci at qui placeat fugiat sequi accusantium natus sint
       Lorem ipsum ablorath
-    </Content>
+    </ModifiedAboutContent>
   );
 };
 

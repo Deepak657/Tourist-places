@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceCard from "./ServiceCard";
+import ServiceCard from "../Cards/Home/OurServices/ServiceCard";
 import styled from "styled-components";
 import { TbCar } from "react-icons/tb";
 import { CiUser } from "react-icons/ci";

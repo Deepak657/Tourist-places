@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import ParagraphComponent from "./ParagraphComponent";
-import HeadingComponent from "./HeadingComponent";
+import ParagraphComponent from "../GlobalComponent/ParagraphComponent";
+import HeadingComponent from "../GlobalComponent/HeadingComponent";
 
 interface Iprops {
   heading: string;

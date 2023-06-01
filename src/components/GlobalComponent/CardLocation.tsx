@@ -8,11 +8,15 @@ interface Iprops {
 const CardLocation = ({ location }: Iprops) => {
   return (
     <Location>
-      <IoLocationOutline style={{ color: "rgb(27, 124, 228)" }} />
+      <IoLocationOutline2 />
       {location}
     </Location>
   );
 };
+
+const IoLocationOutline2 = styled(IoLocationOutline)`
+  color: rgb(27, 124, 228);
+`;
 const Location = styled.div`
   display: flex;
   gap: 5px;

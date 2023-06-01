@@ -24,14 +24,14 @@ const NavbarComponent = () => {
       <ButtonContainer toggle={toggle}>
         <ButtonComponent
           text="Log in"
-          onclick={() => navigate("/login")}
+          onClick={() => navigate("/login")}
           icon=""
           padding="8px 16px"
           fontSize="13px"
         />
         <ButtonComponent
           text="sign up"
-          onclick={() => navigate("/signup")}
+          onClick={() => navigate("/signup")}
           icon=""
           padding="8px 16px"
           fontSize="13px"

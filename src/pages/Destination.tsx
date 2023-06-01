@@ -1,7 +1,7 @@
 import React from "react";
-import BodyContainer from "../components/GlobalComponent/BodyContainer";
-import DestinationCardContainer from "../components/Cards/Destinations/DestinationCardContainer";
-import FooterContainer from "../components/Footer/FooterContainer";
+import BodyContainer from "../components/Container/BodyContainer";
+import DestinationCardContainer from "../components/Container/DestinationCardContainer";
+import FooterContainer from "../components/Container/FooterContainer";
 import { Wrapper } from "./Home";
 const Destination = () => {
   return (

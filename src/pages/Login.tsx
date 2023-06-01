@@ -18,19 +18,19 @@ const Login = () => {
         img="https://images.unsplash.com/photo-1521856729154-7118f7181af9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybCUyMHdpdGglMjBjYW1lcmF8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
       >
         <InputField
-          placeHolder="Enter Your Email"
+          placeholder="Enter Your Email"
           background="#e4e4e4"
           lable="Email"
         />
         <InputField
-          placeHolder="Enter Your Password"
+          placeholder="Enter Your Password"
           background="#e4e4e4"
           lable="Password"
         />
         <LoginWrapper>
           <ButtonComponent
             text="Login"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon=""
             padding="12px 20px"
             fontSize="20px"
@@ -41,21 +41,21 @@ const Login = () => {
         <ButtonWrapper>
           <ButtonComponent
             text="Facebook"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon={<BsFacebook />}
             padding="12px 10px"
             fontSize="20px"
           />
           <ButtonComponent
             text="Google"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon={<FcGoogle />}
             padding="12px 10px"
             fontSize="20px"
           />
           <ButtonComponent
             text="Twitter"
-            onclick={() => navigate("")}
+            onClick={() => navigate("")}
             icon={<FaTwitterSquare />}
             padding="12px 10px"
             fontSize="20px"

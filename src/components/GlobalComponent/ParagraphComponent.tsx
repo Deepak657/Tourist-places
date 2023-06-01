@@ -17,4 +17,19 @@ export const Content = styled.p`
   color: #00000077;
 `;
 
+export const ModifiedContentBlog = styled(Content)`
+  width: 400px;
+  text-align: center;
+`;
+
+export const ModifiedAboutContent = styled(Content)`
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 0;
+`;
+
+export const ModifiedAboutContentList = styled(Content)`
+  line-height: 1.3;
+  margin-bottom: 0;
+`;
 export default ParagraphComponent;

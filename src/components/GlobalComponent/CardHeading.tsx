@@ -15,4 +15,10 @@ export const Heading = styled.h4`
   margin-bottom: 8px;
   color: ${({ theme }) => theme.colors.heading};
 `;
+
+export const ModifiedHeadingBlog = styled(Heading)`
+  font-size: 40px;
+  text-align: center;
+  margin: 50px 0 0;
+`;
 export default CardHeading;

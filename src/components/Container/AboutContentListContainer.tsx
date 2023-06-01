@@ -1,5 +1,5 @@
 import React from "react";
-import AboutContentList from "./AboutContentList";
+import AboutContentList from "../Contents/AboutContentList";
 import styled from "styled-components";
 
 const AboutContentListContainer = () => {

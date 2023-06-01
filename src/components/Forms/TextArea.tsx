@@ -1,14 +1,13 @@
-import React from "react";
+import React, { InputHTMLAttributes } from "react";
 import styled from "styled-components";
 import Lable from "./Lable";
 
-interface Iprops {
+interface Iprops extends InputHTMLAttributes<HTMLTextAreaElement> {
   background: string;
-  placeholder: string;
   lable: string;
 }
 
-const TextArea = ({ background, placeholder, lable }: Iprops) => {
+const TextArea = ({ background, lable, ...restProps }: Iprops) => {
   return (
     <>
       {lable && <Lable lable={lable} />}
@@ -16,7 +15,7 @@ const TextArea = ({ background, placeholder, lable }: Iprops) => {
         background={background}
         cols={30}
         rows={10}
-        placeholder={placeholder}
+        {...restProps}
       ></TextAreaStyle>
     </>
   );

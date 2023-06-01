@@ -1,5 +1,5 @@
 import React from "react";
-import DestinationCard from "./DestinationCard";
+import DestinationCard from "../Cards/Destinations/DestinationCard";
 import styled from "styled-components";
 const DestinationCardContainer = () => {
   return (

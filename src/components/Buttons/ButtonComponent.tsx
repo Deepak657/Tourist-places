@@ -1,8 +1,7 @@
-import React from "react";
+import { ButtonHTMLAttributes } from "react";
 import styled from "styled-components";
-interface Ibutton {
+interface Ibutton extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
-  onclick: () => void;
   icon: any;
   padding: string;
   fontSize: string;
@@ -10,13 +9,13 @@ interface Ibutton {
 
 const ButtonComponent = ({
   text,
-  onclick,
   icon,
   padding,
   fontSize,
+  ...restProps
 }: Ibutton) => {
   return (
-    <Button onClick={onclick} padding={padding} fontSize={fontSize}>
+    <Button padding={padding} fontSize={fontSize} {...restProps}>
       {icon && icon}
       {text}
     </Button>

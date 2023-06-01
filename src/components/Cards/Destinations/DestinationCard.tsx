@@ -15,35 +15,24 @@ interface Iprops {
   review: number;
 }
 
-const DestinationCard = ({
-  image,
-  heading,
-  location,
-  price,
-  review,
-}: Iprops) => {
+const DestinationCard = (props: Iprops) => {
+  const { image, heading, location, price, review } = props;
   const navigate = useNavigate();
   return (
     <DestinationCardStyle>
-      <img
-        src={image}
-        alt=""
-        width="100%"
-        height="220px"
-        style={{ borderRadius: "5px", objectFit: "cover" }}
-      />
+      <Image src={image} alt="" />
       <Genric>
         <CardHeading heading={heading} />
         <CardLocation location={location} />
         <PriceReviewContainer>
           <Price>
-            <span style={{ color: "rgb(11,151,252)" }}>${price}.00</span>per day
+            <Span>${price}.00</Span>per day
           </Price>
           <CradReview review={review} />
         </PriceReviewContainer>
         <ButtonComponent
           text="Book a Trip"
-          onclick={() => navigate("")}
+          onClick={() => navigate("")}
           icon={<IoAirplaneSharp style={{ fontSize: "18px" }} />}
           padding="8px 16px"
           fontSize="13px"
@@ -53,6 +42,15 @@ const DestinationCard = ({
   );
 };
 
+const Image = styled.img`
+  width: 100%;
+  height: 220px;
+  border-radius: 5px;
+  object-fit: cover;
+`;
+const Span = styled.span`
+  color: rgb(11, 151, 252);
+`;
 const DestinationCardStyle = styled.div`
   width: 370px;
   background: #fff;

@@ -1,5 +1,5 @@
 import React from "react";
-import { BackgroundImage } from "../../pages/Blogs";
+import { ModifiedBackgroundImage } from "../../pages/Blogs";
 import ButtonComponent from "../Buttons/ButtonComponent";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
@@ -12,7 +12,7 @@ const BackgraoundImageContainer = ({ img, title }: Iprops) => {
   const navigate = useNavigate();
 
   return (
-    <BackgroundImage2 url={img} height="600px">
+    <ModifiedBackgroundImage url={img} height="600px">
       <Title>{title}</Title>
       <Description>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
@@ -22,18 +22,14 @@ const BackgraoundImageContainer = ({ img, title }: Iprops) => {
       </Description>
       <ButtonComponent
         text="See More"
-        onclick={() => navigate("")}
+        onClick={() => navigate("")}
         icon=""
         padding="12px 100px"
         fontSize="18px"
       />
-    </BackgroundImage2>
+    </ModifiedBackgroundImage>
   );
 };
-
-const BackgroundImage2 = styled(BackgroundImage)`
-  justify-content: flex-end;
-`;
 
 export const Title = styled.h4`
   font-family: sans-serif;
@@ -43,6 +39,10 @@ export const Title = styled.h4`
   text-align: center;
   color: #fff;
   margin-bottom: 50px;
+`;
+
+export const ModifiedTitleBlog = styled(Title)`
+  align-self: flex-end;
 `;
 const Description = styled.p`
   font-family: sans-serif;

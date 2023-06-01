@@ -2,14 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { BsTelephoneFill } from "react-icons/bs";
 import { BiMessageEdit } from "react-icons/bi";
-const GuiderCard = () => {
+
+interface Iprops {
+  img: string;
+  name: string;
+  title: string;
+}
+
+const GuiderCard = ({ img, name, title }: Iprops) => {
   return (
     <GuiderCardStyle>
       <GuiderNameImage>
-        <Image src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="" />
+        <Image src={img} alt="" />
         <GuiderDetails>
-          <GuiderName>Sher Nadir</GuiderName>
-          <GuiderDuity>Guider</GuiderDuity>
+          <GuiderName>{name}</GuiderName>
+          <GuiderDuity>{title}</GuiderDuity>
         </GuiderDetails>
       </GuiderNameImage>
       <IconContainer>

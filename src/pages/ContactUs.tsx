@@ -1,7 +1,7 @@
 import React from "react";
-import BackgraoundImageContainer from "../components/GlobalComponent/BackgraoundImageContainer";
+import BackgraoundImageContainer from "../components/Container/BackgraoundImageContainer";
 import ContactForm from "../components/Forms/ContactForm";
-import FooterContainer from "../components/Footer/FooterContainer";
+import FooterContainer from "../components/Container/FooterContainer";
 import { Wrapper } from "./Home";
 
 const ContactUs = () => {
