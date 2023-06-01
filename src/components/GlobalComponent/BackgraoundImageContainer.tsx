@@ -1,5 +1,6 @@
 import React from "react";
-import { BackgroundImage } from "../Forms/Form";
+// import { BackgroundImage } from "../Forms/Form";
+import { BackgroundImage } from "../../pages/Blogs";
 import ButtonComponent from "../Buttons/ButtonComponent";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";

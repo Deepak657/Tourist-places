@@ -1,5 +1,4 @@
 import React from "react";
-import { BackgroundImage } from "../components/Forms/Form";
 import ButtonComponent from "../components/Buttons/ButtonComponent";
 import { useNavigate } from "react-router-dom";
 import { Heading } from "../components/GlobalComponent/CardHeading";
@@ -76,6 +75,21 @@ const Blogs = () => {
     </>
   );
 };
+
+export const BackgroundImage = styled.div<{ url: string; height: string }>`
+  background: url(${({ url }) => url}) center;
+  background-size: cover;
+  padding: 80px;
+  height: ${({ height }) => height};
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
+  @media (max-width: 400px) {
+    padding: 40px;
+  }
+`;
 
 const ContentWrapper = styled.div`
   margin: 15px 0 0;

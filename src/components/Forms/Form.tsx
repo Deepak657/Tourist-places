@@ -10,7 +10,7 @@ interface Iprops {
 
 const Form = ({ title, subtitle, img, children }: Iprops) => {
   return (
-    <BackgroundImage
+    <FormBackgroundImage
       url="https://wallpapercave.com/wp/wp4755737.jpg"
       height="auto"
     >
@@ -26,7 +26,7 @@ const Form = ({ title, subtitle, img, children }: Iprops) => {
         </LoginForm>
         <Image src={img} alt="" />
       </LoginStyle>
-    </BackgroundImage>
+    </FormBackgroundImage>
   );
 };
 
@@ -44,16 +44,11 @@ const Image = styled.img`
   }
 `;
 
-export const BackgroundImage = styled.div<{ url: string; height: string }>`
+export const FormBackgroundImage = styled.div<{ url: string; height: string }>`
   background: url(${({ url }) => url}) center;
   background-size: cover;
   padding: 80px;
   height: ${({ height }) => height};
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  border-radius: 10px;
   @media (max-width: 400px) {
     padding: 40px;
   }
