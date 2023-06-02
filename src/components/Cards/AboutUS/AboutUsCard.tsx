@@ -39,7 +39,6 @@ const AboutUsCard = ({ image, name }: Iprops) => {
         <ButtonComponent
           text="See More"
           onClick={() => navigate("")}
-          icon=""
           padding="8px 16px"
           fontSize="13px"
         />

@@ -31,7 +31,6 @@ const Login = () => {
           <ButtonComponent
             text="Login"
             onClick={() => navigate("")}
-            icon=""
             padding="12px 20px"
             fontSize="20px"
           />

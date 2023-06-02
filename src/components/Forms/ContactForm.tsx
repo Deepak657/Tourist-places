@@ -33,7 +33,6 @@ const ContactForm = ({ img }: Iprops) => {
           <ButtonComponent
             text="Send"
             onClick={() => navigate("")}
-            icon=""
             padding="10px 50px"
             fontSize="16px"
           />

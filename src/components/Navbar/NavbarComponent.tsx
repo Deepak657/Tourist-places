@@ -24,14 +24,12 @@ const NavbarComponent = () => {
         <ButtonComponent
           text="Log in"
           onClick={() => navigate("/login")}
-          icon=""
           padding="8px 16px"
           fontSize="13px"
         />
         <ButtonComponent
           text="sign up"
           onClick={() => navigate("/signup")}
-          icon=""
           padding="8px 16px"
           fontSize="13px"
         />

@@ -5,17 +5,17 @@ import ButtonComponent from "../components/Buttons/ButtonComponent";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import JourneyCard from "../components/Cards/Home/JourneyCard";
-import { IoLocationOutline } from "react-icons/io5";
 import { IoAirplaneSharp } from "react-icons/io5";
 import { HiSearch } from "react-icons/hi";
-import { MdMonetizationOn } from "react-icons/md";
 import BodyContainer from "../components/Container/BodyContainer";
-import DestinationCardContainer from "../components/Container/DestinationCardContainer";
-import ServiceCardContaienr from "../components/Container/ServiceCardContaienr";
-import ReservationContainer from "../components/Container/ReservationContainer";
-import AboutCardContainer from "../components/Container/AboutCardContainer";
+import DestinationCard from "../components/Cards/Destinations/DestinationCard";
 import FooterContainer from "../components/Container/FooterContainer";
-
+import { ReservationCardContainerStyle, ResevationData } from "./Resevations";
+import { DestinationData, DestinationCardContainerStyle } from "./Destination";
+import ReservationCard from "../components/Cards/Resevation/ReservationCard";
+import { ClientsData, JourneyCardData, ServiceData } from "../Util";
+import AboutUsCard from "../components/Cards/AboutUS/AboutUsCard";
+import ServiceCard from "../components/Cards/Home/OurServices/ServiceCard";
 const Home = () => {
   const naviagte = useNavigate();
   return (
@@ -55,50 +55,76 @@ const Home = () => {
           />
         </JourneyBodyContainer>
         <JourneyCardContainer>
-          <JourneyCard
-            options="Location"
-            seleted="United States"
-            icon={<IoLocationOutline />}
-          />
-          <JourneyCard
-            options="Check In Date"
-            seleted="23/4/2023"
-            icon={<IoAirplaneSharp />}
-          />
-          <JourneyCard
-            options="Check Out Date"
-            seleted="23/4/2023"
-            icon={<IoAirplaneSharp />}
-          />
-          <JourneyCard
-            options="Budget"
-            seleted="$23000"
-            icon={<MdMonetizationOn />}
-          />
+          {JourneyCardData.map((item) => {
+            return (
+              <JourneyCard
+                key={item.id}
+                options={item.options}
+                seleted={item.seleted}
+                icon={item.icon}
+              />
+            );
+          })}
         </JourneyCardContainer>
         <BodyContainer
           heading="Lets Explore Your Destination"
-          headingTwo=""
           paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
   tempora a ut vel minima. Voluptates magnam quos quasi, tempora obcaecati
   possimus perspiciatis eligendi ipsum dignissimos amet! Omnis perspiciatis
   obcaecati perspiciatis eligendi ipsum dignissimos amet! Omnis."
           image="https://media.istockphoto.com/id/1096035138/photo/beautiful-young-couple-relaxing-after-hiking-and-taking-a-break.jpg?s=170667a&w=0&k=20&c=a5LdzykLqSgHBOxjxAXdgiULR8WjQ3zHEYH6Kan8SgU="
         />
-        <DestinationCardContainer />
-        <ServiceCardContaienr />
+        <DestinationCardContainerStyle>
+          {DestinationData.map((item) => {
+            return (
+              item.id <= 3 && (
+                <DestinationCard
+                  key={item.id}
+                  image={item.image}
+                  heading={item.title}
+                  location={item.location}
+                  price={item.price}
+                  review={item.review}
+                />
+              )
+            );
+          })}
+        </DestinationCardContainerStyle>
+        <ServiceHeading>Our Services</ServiceHeading>
+
+        <ServiceContainer>
+          {ServiceData.map((item) => {
+            return (
+              <ServiceCard
+                key={item.id}
+                icon={item.icon}
+                heading={item.title}
+                offer={item.offer}
+              />
+            );
+          })}
+        </ServiceContainer>
         <BodyContainer
           heading="Best Every Reservations For Your"
-          headingTwo=""
           paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
   tempora a ut vel minima. Voluptates magnam quos quasi, tempora obcaecati
   possimus perspiciatis eligendi ipsum dignissimos amet! Omnis perspiciatis
   obcaecati perspiciatis eligendi ipsum dignissimos amet! Omnis."
           image="https://theluxuryeditor.com/wp-content/uploads/2019/02/178793622.jpg"
         />
-        <ReservationContainer />
-        <ReservationContainer />
-
+        <ReservationCardContainerStyle>
+          {ResevationData.map((item) => {
+            return (
+              <ReservationCard
+                key={item.id}
+                image={item.image}
+                heading={item.title}
+                location={item.location}
+                review={item.review}
+              />
+            );
+          })}
+        </ReservationCardContainerStyle>
         <BodyContainer
           heading="About Us"
           headingTwo="Our Story"
@@ -112,26 +138,35 @@ const Home = () => {
           <ButtonComponent
             text="See More"
             onClick={() => naviagte("")}
-            icon=""
             padding="10px 80px"
             fontSize="18px"
           />
         </SeeMore>
         <BodyContainer
           heading="What's Clients Say About us"
-          headingTwo=""
           paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
   tempora a ut vel minima. Voluptates magnam quos quasi, tempora obcaecati
   possimus perspiciatis eligendi ipsum dignissimos amet! Omnis perspiciatis
   obcaecati perspiciatis eligendi ipsum dignissimos amet! Omnis."
           image="https://www.tourradar.com/days-to-come/wp-content/uploads/2019/04/Quotes8.jpg"
         />
-        <AboutCardContainer />
+
+        <AboutCardContainerStyle>
+          {ClientsData.map((client) => {
+            return (
+              <AboutUsCard
+                key={client.id}
+                image={client.image}
+                name={client.name}
+              />
+            );
+          })}
+        </AboutCardContainerStyle>
+
         <SeeMore>
           <ButtonComponent
             text="See More"
             onClick={() => naviagte("")}
-            icon=""
             padding="10px 80px"
             fontSize="18px"
           />
@@ -141,6 +176,33 @@ const Home = () => {
     </>
   );
 };
+
+const ServiceHeading = styled.div`
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+  font-size: 34px;
+  font-family: sans-serif;
+  font-weight: 800;
+  color: ${({ theme }) => theme.colors.heading};
+`;
+const ServiceContainer = styled.div`
+  display: flex;
+  gap: 53px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  flex-wrap: wrap;
+`;
+
+const AboutCardContainerStyle = styled.div`
+  display: flex;
+  gap: 150px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: center;
+  margin: 0 auto 30px;
+`;
 
 const Image = styled.img`
   width: 50%;

@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { ModifiedTitleBlog } from "../components/Container/BackgraoundImageContainer";
 import { ModifiedHeadingBlog } from "../components/GlobalComponent/CardHeading";
 import { ModifiedContentBlog } from "../components/GlobalComponent/ParagraphComponent";
-import { BlogsImageUrl } from "../BlogsImage/BlogsImage";
+import { BlogsImageUrl } from "../Util";
 import BlogsCard from "../components/Cards/Blogs/BlogsCard";
 const Blogs = () => {
   const navigate = useNavigate();
@@ -24,7 +24,6 @@ const Blogs = () => {
           <ButtonComponent
             text="See More"
             onClick={() => navigate("")}
-            icon=""
             padding="12px 100px"
             fontSize="18px"
           />
@@ -45,7 +44,6 @@ const Blogs = () => {
           <ButtonComponent
             text="See More"
             onClick={() => navigate("")}
-            icon=""
             padding="10px 80px"
             fontSize="18px"
           />

@@ -5,7 +5,7 @@ import HeadingComponent from "../GlobalComponent/HeadingComponent";
 
 interface Iprops {
   heading: string;
-  headingTwo: string;
+  headingTwo?: string;
   paragraph: string;
   image: string;
 }
@@ -15,7 +15,7 @@ const BodyContainer = ({ heading, headingTwo, paragraph, image }: Iprops) => {
     <DestinationBodyContainer>
       <DestinationLeftBody>
         <HeadingComponent heading={heading} />
-        <HeadingTwo>{headingTwo}</HeadingTwo>
+        {headingTwo && <HeadingTwo>{headingTwo}</HeadingTwo>}
         <ParagraphComponent paragraph={paragraph} />
       </DestinationLeftBody>
       <Image src={image} alt="" style={{}} />

@@ -4,7 +4,7 @@ import styled from "styled-components";
 interface Ijourney {
   options: string;
   seleted: string;
-  icon: any;
+  icon?: JSX.Element;
 }
 const JourneyCard = ({ options, seleted, icon }: Ijourney) => {
   return (

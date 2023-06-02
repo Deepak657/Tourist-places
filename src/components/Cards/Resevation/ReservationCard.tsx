@@ -27,7 +27,6 @@ const ReservationCard = ({ image, heading, location, review }: Iprops) => {
           <ButtonComponent
             text="Details"
             onClick={() => navigate("")}
-            icon=""
             padding="8px 16px"
             fontSize="13px"
           />

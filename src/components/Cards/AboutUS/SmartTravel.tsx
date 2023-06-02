@@ -6,7 +6,7 @@ interface Iprops {
   title: string;
   img: string;
   order: number;
-  component: any;
+  component?: JSX.Element;
   height: string;
 }
 const SmartTravel = ({ title, img, height, order, component }: Iprops) => {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CardHeading from "../../../GlobalComponent/CardHeading";
 
 interface Iprops {
-  icon: any;
+  icon?: JSX.Element;
   heading: string;
   offer: string;
 }

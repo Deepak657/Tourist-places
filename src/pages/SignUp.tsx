@@ -26,7 +26,6 @@ const SignUp = () => {
           <ButtonComponent
             text="Sign up"
             onClick={() => navigate("")}
-            icon=""
             padding="12px 20px"
             fontSize="20px"
           />

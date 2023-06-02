@@ -41,7 +41,6 @@ const AboutUs = () => {
           <ButtonComponent
             text="See More"
             onClick={() => navigate("")}
-            icon=""
             padding="10px 80px"
             fontSize="18px"
           />

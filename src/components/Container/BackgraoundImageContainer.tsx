@@ -23,7 +23,6 @@ const BackgraoundImageContainer = ({ img, title }: Iprops) => {
       <ButtonComponent
         text="See More"
         onClick={() => navigate("")}
-        icon=""
         padding="12px 100px"
         fontSize="18px"
       />

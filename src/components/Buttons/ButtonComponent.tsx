@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from "react";
 import styled from "styled-components";
 interface Ibutton extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
-  icon: any;
+  icon?: JSX.Element;
   padding: string;
   fontSize: string;
 }
