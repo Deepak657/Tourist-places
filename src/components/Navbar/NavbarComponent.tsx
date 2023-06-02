@@ -8,7 +8,6 @@ import { AiOutlineClose } from "react-icons/ai";
 const NavbarComponent = () => {
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
-  console.log(toggle);
 
   return (
     <NavbarContainer>

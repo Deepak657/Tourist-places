@@ -38,7 +38,7 @@ const Blogs = () => {
         </ContentWrapper>
         <BlogsCardContanerStyle>
           {BlogsImageUrl.map((url) => {
-            return <BlogsCard img={url.url} id={url.id} />;
+            return <BlogsCard img={url.url} key={url.id} />;
           })}
         </BlogsCardContanerStyle>
         <SeeMore>
